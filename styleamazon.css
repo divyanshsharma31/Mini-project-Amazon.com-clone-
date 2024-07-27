@@ -158,7 +158,7 @@ margin-right: 5px; /* Space between icon and text */
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  margi-top: 5px;
+  margi-top: 8px;
 }
 .hero-message{
   text-decoration: none;
