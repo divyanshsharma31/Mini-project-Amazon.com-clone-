@@ -11,7 +11,7 @@
   display: flex;
   width: 100%;
   align-items: center;
-  justify-content: space-evenly;
+  
 }
 .nav-logo {
   height: 20px;
@@ -182,7 +182,7 @@ margin-right: 5px; /* Space between icon and text */
   flex-wrap: wrap;
 }
 .box{
-  height: 260px;
+  height: 250px;
   
   width: 23%;
   background-color: white;
