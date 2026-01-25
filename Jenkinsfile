@@ -11,6 +11,7 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/divyanshsharma31/Mini-project-Amazon.com-clone-.git'
             }
         }
+options { skipDefaultCheckout(true) }
 
         stage('Build Docker Image') {
             steps {
