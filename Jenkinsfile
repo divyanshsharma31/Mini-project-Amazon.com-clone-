@@ -1,9 +1,9 @@
-
-
-
-
 pipeline {
     agent any
+
+    options {
+        skipDefaultCheckout(true)
+    }
 
     stages {
         stage('Checkout Code') {
@@ -11,7 +11,6 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/divyanshsharma31/Mini-project-Amazon.com-clone-.git'
             }
         }
-options { skipDefaultCheckout(true) }
 
         stage('Build Docker Image') {
             steps {
@@ -30,15 +29,8 @@ options { skipDefaultCheckout(true) }
 
         stage('Health Check') {
             steps {
-                sh 'curl -s http://localhost/health.html | head -n 1'
+                sh 'curl -s http://localhost:8090/health.html | head -n 1'
             }
         }
     }
 }
-
-
-
-
-
-
-
